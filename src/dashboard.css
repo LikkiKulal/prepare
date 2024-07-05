@@ -1,0 +1,585 @@
+.p1app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+
+  .p1main {
+    display: flex;
+    flex: 1;
+  }
+
+  .p2header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+
+    .p2logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #ff69b4;
+    }
+
+    .p2user {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      position: relative;
+
+      .p2text {
+        font-weight: 700;
+        margin-right: 657px; /* Position from the left edge of .p2user */
+        font-size: 24px;
+      }
+      .p2coin {
+        font-weight: 600;
+        font-size: 20px;
+        display: inline-flex; /* Use inline-flex to keep elements in a line */
+        align-items: center; /* Align items vertically */
+        gap: 5px; /* Adjust the gap between text and image */
+        background-color: #fff2f4;
+        border-radius: 8px;
+        width: 150px;
+        height: 49px;
+        margin-right: 15px;
+        justify-content: center; /* Center content horizontally */
+        padding: 0 10px; /* Optional: Add padding for better spacing */
+      }
+
+      .p2img-container {
+        display: flex;
+        margin-right: 15px;
+
+        .p2img {
+          width: 30px; /* Adjust image width as needed */
+          height: 30px; /* Adjust image height as needed */
+          border-radius: 25px; /* Ensures the image appears in a circle */
+          background-color: #fff2f4; /* Sets background color inside the circle */
+          margin-right: 10px; /* Creates gap between images */
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+  .p2sidebar {
+    width: 200px;
+    height: 100%;
+    background-color: #fff;
+    padding: 1rem;
+    border-right: 1px solid #e9ecef;
+    margin-top: 90px;
+    position: fixed;
+
+    .p2store {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+      justify-content: left;
+      flex-wrap: wrap; /* Allow items to wrap if necessary */
+
+      .img {
+        margin-right: 50px; /* Adjust margin as needed */
+      }
+      .text {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        font-weight: 600;
+      }
+
+      .text img {
+        margin-left: 10px; /* Adjust margin as needed */
+      }
+    }
+
+    nav ul {
+      list-style-type: none; /* Removes default bullet points */
+      padding: 0; /* Removes default padding */
+    }
+
+    nav li {
+      display: flex;
+      align-items: center;
+      padding: 10px; /* Adjust padding as needed */
+    }
+
+    nav li img {
+      margin-right: 10px; /* Adjust margin between image and text */
+    }
+    .p3active {
+      font-weight: bold;
+      width: 100%;
+      background-color: #fff2f4;
+      position: relative; /* Ensure the pseudo-element is positioned relative to this element */
+    }
+    .p3active::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%; /* Full height of the parent element */
+      width: 5px; /* Adjust thickness of the line */
+      background-color: #ff4081; /* Color of the line */
+    }
+  }
+  .p2dash {
+    display: flex;
+    padding: 1rem;
+    gap: 2rem;
+    /* max-width: 800px; Adjust as needed */
+    margin: 0 auto; /* Center align the container */
+    padding: 20px;
+    /* background-color: #f0f0f0; */
+    margin-left: 255px;
+    margin-top: 100px;
+
+    .p3content {
+      flex: 1;
+      background-color: #fff; /* Example background color */
+      /* padding: 20px; */
+      border-radius: 8px;
+      /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+
+      /* Container for the 'Quick Actions' section */
+      .p3quick-container {
+        margin-bottom: 20px; /* Example margin bottom */
+
+        .p3quick {
+          margin-bottom: 2rem;
+          padding: 20px;
+          background-color: #fff; /* Example background color */
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          /* width: 500px; */
+          /* height: 244px; */
+          justify-content: space-around;
+        }
+
+        .p4actions {
+          display: flex;
+          gap: 1rem;
+          overflow-x: auto;
+        }
+        .a {
+          margin-left: 300px;
+          margin-top: 15px;
+        }
+
+        .p5action {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 1rem;
+          border: none;
+          border-radius: 8px;
+          /* min-width: 100px; */
+          background-color: #fff;
+        }
+        .p5action img {
+          width: 35px;
+          height: 35px;
+          margin-bottom: 0.5rem;
+          background-color: #fff2f4; /* Set your desired background color */
+          padding: 0.5rem; /* Optional: Add padding if needed */
+          border-radius: 5px; /* Optional: Add border radius if needed */
+        }
+
+        .text {
+          font-size: 1rem;
+          color: #000; /* Optional: Set text color if needed */
+        }
+      }
+      .p3recent {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        height: 660px;
+        padding: 20px; /* Add padding to the container */
+
+        .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+        }
+
+        .header h2 {
+          margin: 0;
+          margin-left: 15px;
+        }
+
+        .header .icon {
+          background-color: #fff2f4;
+          border-radius: 50%;
+          padding: 0.5rem;
+        }
+      }
+
+      .p4tabs {
+        display: flex;
+        align-items: flex-end; /* Align items to the bottom */
+        gap: 20px; /* Adjust the gap as needed */
+        margin-top: 10px;
+        margin-bottom: 15px;
+        margin-left: 15px;
+      }
+      .p4tabs span {
+        cursor: pointer;
+        font-size: 16px; /* Adjust font size as needed */
+      }
+
+      .p4tabs span:first-child {
+        color: black;
+      }
+
+      .p4tabs span:last-child {
+        color: rgba(190, 190, 190, 1);
+      }
+
+      .p4tabs .p5active {
+        position: relative;
+        color: black; /* Active tab text color */
+      }
+
+      .p4tabs .p5active::after {
+        content: "";
+        position: absolute;
+        bottom: -5px; /* Adjust the position of the underline */
+        left: 0;
+        width: 100%;
+        height: 2px; /* Thickness of the underline */
+        background-color: red; /* Color of the underline */
+      }
+      .p4list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .p5item {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          padding: 15px;
+          border-radius: 8px;
+          height: 98px;
+        }
+        
+        .p5item::after {
+          content: '';
+          position: absolute;
+          left: 15px; /* Adjust as needed based on your padding */
+          right: 15px; /* Adjust as needed based on your padding */
+          bottom: -15px; /* Adjust to control the distance of the separate border */
+          border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .p5item:last-child::after {
+          display: none; /* Remove the separate border for the last item */
+        }
+        
+
+        .p6user {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .p7icon img {
+          background-color: #fff2f4; /* Background color for the profile image */
+          border-radius: 50%;
+          padding: 0.5rem;
+        }
+
+        .p7details {
+          display: flex;
+          align-items: center;
+          flex: 1;
+        }
+
+        .p7phone {
+          margin-right: 1rem;
+          margin-bottom: 15px;
+          margin-left: 15px;
+        }
+
+        .p7amount {
+          color: green;
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+        }
+
+        .p6details {
+          display: flex;
+          flex-direction: column;
+          margin-top: 0.5rem;
+        }
+
+        .p8subtext {
+          background-color: #fff2f4;
+          padding: 0.25rem 0.5rem;
+          border-radius: 4px;
+          margin-left: -258px;
+          margin-bottom: -100px;
+        }
+
+        .payment-details {
+          position: relative;
+          /* Ensure no conflicting layout properties are applied */
+        }
+
+        .p8time {
+          position: absolute;
+          color: rgba(190, 190, 190, 1);
+          display: block;
+          margin-top: 45px; /* Adjust as needed */
+          margin-left: 55px;
+        }
+
+        .p9date {
+          position: absolute;
+          display: block;
+          margin-top: -10px; /* Adjust as needed */
+          margin-left: 55px;
+        }
+      }
+
+      .p4list.settlements .p8subtext {
+        background-color: #fff2f4;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        margin-left: -298px;
+        margin-bottom: -100px;
+      }
+    }
+    .p3orders {
+      width: 500px;
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      height: 800px;
+
+      .p3orders {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .orders-list {
+        width: 60%;
+      }
+
+      .order-details-container {
+        width: 65%;
+        position: relative;
+        top: -550px;
+        display: flex;
+        justify-content: space-between;
+        left: 300px;
+        z-index: 1;
+      }
+
+      .order-details {
+        background-color: #f5f5f5;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      .p4status {
+        display: flex;
+        margin-bottom: 1rem;
+        gap: 10px;
+      }
+
+      .p4order {
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        height: 300px;
+      }
+      
+      
+
+      .p5header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+      }
+
+      .p5total {
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+        /* margin: 8px 0; */
+        font-weight: 500;
+
+        .payment-method {
+          background-color: #ee46771a; /* Replace with your desired background color */
+          padding: 3px 5px; /* Adjust padding as needed */
+          border-radius: 3px; /* Optional: Add rounded corners */
+        }
+      }
+
+      .p4status span {
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 4px;
+        color: rgba(190, 190, 190, 1);
+      }
+
+      .p4status .p5active {
+        position: relative; /* Make the span a positioned element */
+        color: #000; /* Text color */
+      }
+      .p4status .p5active::after {
+        content: ""; /* Required for pseudo-elements */
+        position: absolute; /* Position relative to the span */
+        bottom: -2px; /* Adjust this value to control the distance from the text */
+        left: 35px; /* Start the line from the left edge of the span */
+        width: 50px; /* Adjust this value to control the width of the line */
+        height: 2px; /* Thickness of the line */
+        background-color: #ff4081; /* Color of the line */
+      }
+     
+      
+      
+      .p5details {
+        background: none;
+        border: none;
+        text-underline-offset: 5px;
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        text-decoration-color: #ff4081;
+        cursor: pointer;
+        padding: 0;
+        font-size: 1em;
+        width: 100%;
+        justify-content: center; /* Center items horizontally */
+        margin-top: 0.5rem;
+        display: inline-flex; /* Use inline-flex to align items in a row */
+        align-items: center; /* Align items vertically in the center */
+        cursor: pointer; /* Show pointer cursor on hover */
+
+        .p5details img {
+          margin-left: 0.5rem; /* Adjust margin as needed between text and image */
+        }
+      }
+      .p5items span {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        margin-bottom: 15px;
+
+        .p5items img {
+          margin-left: 0.5rem; /* Optional: adds some space between the text and the image */
+        }
+      }
+
+      .p6id {
+        font-weight: 400;
+        color: rgba(238, 70, 119, 1);
+      }
+
+      .p6date {
+        color: rgba(3, 4, 1, 1);
+        font-weight: 400;
+      }
+
+      .p5items {
+        margin-bottom: 0.5rem;
+        padding-bottom: 1rem;
+        position: relative; /* Ensure the pseudo-element is positioned relative to the container */
+      }
+      
+      .p5items::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        border-bottom: 1px solid black;
+      }
+      
+      .p5items.prepare::after {
+        border-bottom: none;
+      }
+
+      .p6item {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+      }
+
+      .p6item span {
+        font-weight: 200;
+        color: inherit; /* Ensures spans inherit the color of .p6item */
+      }
+      .p5actions {
+        display: flex; /* Use flexbox to align items */
+        gap: 20px; /* Adjust the gap value as needed */
+        justify-content: center;
+      }
+      .p6reject {
+        background-color: #fff;
+        color: #ff4081;
+        border: 1px solid #ff4081;
+        height: 50px;
+        width: 200px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 18px;
+      }
+
+      .p6confirm {
+        background-color: #ff4081;
+        color: #fff;
+        border: 1px solid #ff4081;
+        height: 50px;
+        width: 200px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .profile-container {
+    position: relative;
+  }
+
+  .p1logout {
+    position: absolute;
+    top: 85px; /* Adjust top position to 0 to display on top of parent */
+    right: 115px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .floating-chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff4081;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+}
